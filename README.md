@@ -8,6 +8,9 @@ the application would be running through the usage of nodemon which is a tool th
 the node application when file changes in the directory and helps to get better utilisation.
 
 
+....
+
+
 
 
 * Here first to make an empty directory for the package initialisation, then we have to install the node,nodemon,express the in the terminal,
