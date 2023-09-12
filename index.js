@@ -8,7 +8,7 @@ app.use(express.json());
 
 const usermodel = require("./models/usermodel");
 
-mongoose.connect('mongodb+srv://rajiljain777:Rajil444@cluster0.3y6bfnm.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('<database connect link>')
 
 app.listen( PORT, ()=>console.log(`new with git repo at http://localhost:${PORT}`)
 )
@@ -47,7 +47,7 @@ app.post('/regions/:zone', async (req,res)=>{
 app.get('/regions/server', async (req,res)=> {
 
 
-     //it will show the param database collections on get method address. 
+     //it will show all the param database collections on get method address. 
         usermodel.find({}).then(
             function(param){
             res.json(param)
@@ -58,19 +58,19 @@ app.get('/regions/server', async (req,res)=> {
             
            
 
-        //directly create through function when these get method will be called and wil be seen in  database
+        //directly create through function when these get method will be called and will be seen in  database
         /*async function insert(){
             await param.create({
                 id:1,
                 server:800,
                 zone:'russia'
-                name:'rajil'
+                name:'rambo'
             })
         }
         insert()*/
         
 
-        //it will show the param database collections in console because we write that. 
+        //it will show the param database collections in console log. 
         /*usermodel.find({}).then(
             function(param){
             console.log(param)
@@ -80,6 +80,8 @@ app.get('/regions/server', async (req,res)=> {
    
      });
 
+
+//these method is gone called and the function will be requested to find and update the server.
 app.post('/regions/zone/servch',async (req,res)=>{
     const {name}=req.body;
     const server= Math.round(Math.floor(Math.random()*10));
